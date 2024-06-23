@@ -54,26 +54,28 @@ for (let i = 0; i < ImgOfProWeb.length; i++) {
 }
 
 
+// Battery Charging Border Moving Box, Circular Motion Loading Effect, Contact Us Form, Excel Style, Filling Color Effects, Flying Box Effect, Hover Button Effect Border Move, 
+
 const CardswebProLinks = [
-    'https://inivrex.in/projects/battery%20charging',
-    'https://inivrex.in/projects/border%20moving%20box',
-    'https://inivrex.in/projects/circular%20motion%20loading%20effect',
-    'https://inivrex.in/projects/contact%20us%20form',
-    'https://inivrex.in/projects/excel%20style',
-    'https://inivrex.in/projects/filling%20color%20effect',
-    'https://inivrex.in/projects/flying%20box%20effect',
-    'https://inivrex.in/projects/hoverbutton%20effect%20border%20move',
-    'https://inivrex.in/projects/hover%20effect%20with%20scale',
-    'https://inivrex.in/projects/loading%20effect%201',
-    'https://inivrex.in/projects/loading%20effect%202',
-    'https://inivrex.in/projects/loading%20effect%203',
-    'https://inivrex.in/projects/modern%20button%20switch%20animation',
-    'https://inivrex.in/projects/moving%20fan%20animation',
-    'https://inivrex.in/projects/pendulum%20effect%20loading',
-    'https://inivrex.in/projects/signal%20receiving%20animation',
-    'https://inivrex.in/projects/slide%20button',
-    'https://inivrex.in/projects/three%20ball%20loading%20animation',
-    'https://inivrex.in/projects/water%20drop'
+    'https://inivrex.in/projects/Battery%20Charging.html',
+    'https://inivrex.in/projects/Border%20Moving%20Box.html',
+    'https://inivrex.in/projects/Circular%20Motion%20Loading%20Effect.html',
+    'https://inivrex.in/projects/Contact%20Us%20Form.html',
+    'https://inivrex.in/projects/Excel%20Style.html',
+    'https://inivrex.in/projects/Filling%20Color%20Effect.html',
+    'https://inivrex.in/projects/Flying%20Box%20Effect.html',
+    'https://inivrex.in/projects/HoverButton%20Effect%20Border%20Move.html',
+    'https://inivrex.in/projects/Hover%20Effect%20With%20Scale.html',
+    'https://inivrex.in/projects/Loading%20Effect%201.html',
+    'https://inivrex.in/projects/Loading%20Effect%202.html',
+    'https://inivrex.in/projects/Loading%20Effect%203.html',
+    'https://inivrex.in/projects/Modern%20Button%20Switch%20Animation.html',
+    'https://inivrex.in/projects/Moving%20Fan%20Animation.html',
+    'https://inivrex.in/projects/Pendulum%20Effect%20Loading.html',
+    'https://inivrex.in/projects/Signal%20Receiving%20Animation.html',
+    'https://inivrex.in/projects/Slide%20Button.html',
+    'https://inivrex.in/projects/Three%20Ball%20Loading%20Animation.html',
+    'https://inivrex.in/projects/Water%20Drop.html'
 ];
 
 for (let i = 0; i < cardsWebPro.length; i++) {
