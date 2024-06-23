@@ -41,7 +41,7 @@ for (let i = 0; i < navlinks.length; i++) {
 };
 
 //Inputting Web Project Text And Images
-let textWebPro = ["Battery Charging", "Border Moving Box", "Circular Motion Loading Effect", "Contact us form", "Excel Style", "Filling Color Effect", "Flying Box Effect", "HoverButton Effect Border Move", "Hover Effect With Scale", "Loading Effect 1", "Loading Effect 2", "Loading Effect 3", "Modern Button Switch Animation", "Moving Fan Animation", "Pendulum Effect Loading", "Signal Receiving Animation", "Slide Button", "Three Ball Loading Animation", "Water Drop"];
+let textWebPro = ["Battery Charging", "Border Moving Box", "Circular Motion Loading Effect", "Contact us form", "Excel Style", "Filling Color Effects", "Flying Box Effect", "Hover Button Effect Border Move", "Hover Effect With Scale", "Loading Effect 1", "Loading Effect 2", "Loading Effect 3", "Modern Button Switch Animation", "Moving Fan Animation", "Pendulum Effect Loading", "Signal Receiving Animation", "Slide Button", "Three Ball Loading Animation", "Water Drop"];
 
 for (let i = 0; i < WebProTxts.length; i++) {
     WebProTxts[i].textContent = textWebPro[i];
@@ -62,9 +62,9 @@ const CardswebProLinks = [
     'https://inivrex.in/projects/Circular%20Motion%20Loading%20Effect.html',
     'https://inivrex.in/projects/Contact%20Us%20Form.html',
     'https://inivrex.in/projects/Excel%20Style.html',
-    'https://inivrex.in/projects/Filling%20Color%20Effect.html',
+    'https://inivrex.in/projects/Filling%20Color%20Effects.html',
     'https://inivrex.in/projects/Flying%20Box%20Effect.html',
-    'https://inivrex.in/projects/HoverButton%20Effect%20Border%20Move.html',
+    'https://inivrex.in/projects/Hover%20Button%20Effect%20Border%20Move.html',
     'https://inivrex.in/projects/Hover%20Effect%20With%20Scale.html',
     'https://inivrex.in/projects/Loading%20Effect%201.html',
     'https://inivrex.in/projects/Loading%20Effect%202.html',
