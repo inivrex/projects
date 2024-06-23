@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Button</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(24, 24, 24);
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: flex;
+    }
+
+    #check {
+        width: 80rem;
+        height: 30rem;
+    }
+
+    #check {
+        -webkit-appearance: none;
+        background: linear-gradient(0deg, #333, black);
+        border: 3rem solid rgb(51, 51, 51);
+        box-shadow: 0px 0px 100px 20px black inset, 0px 0px 22px 4px black;
+        border-radius: 30rem;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #check::after {
+        content: "";
+        position: absolute;
+        z-index: 12;
+        border-radius: 25rem;
+        top: 0mm;
+        left: 0px;
+        width: 50rem;
+        height: 100%;
+        background: linear-gradient(to bottom, rgb(34, 34, 34), rgb(46, 46, 46));
+        border: 2px solid red;
+        transition: 0.2s;
+    }
+
+    #check::before {
+        content: "";
+        position: absolute;
+        z-index: 14;
+        border-radius: 100%;
+        width: 13rem;
+        height: 13rem;
+        border: 3rem solid red;
+        transition: 0.2s;
+        top: 11.7%;
+        left: 21%;
+    }
+
+    #check:checked::after {
+        border: 2px solid rgb(0, 255, 0);
+        left: 32.3%;
+    }
+
+    #check:checked::before {
+        width: 0rem;
+        border-radius: 13rem;
+
+        border: 3rem solid rgb(0, 255, 0);
+        left: 62.5%;
+    }
+</style>
+</head>
+
+<body>
+    <div id="sec">
+        <input type="checkbox" name="" id="check">
+    </div>
+</body>
+
+</html>

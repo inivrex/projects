@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effect</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 12;
+    }
+
+    body {
+        background-color: rgb(13, 45, 104);
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #Circle {
+        background-color: rgb(4, 0, 255);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.2);
+        border: 2px solid rgb(71, 68, 255);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.445);
+        cursor: pointer;
+    }
+
+    .CirUp {
+        animation: BigAni 01s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 alternate both;
+    }
+
+    .CirLeave {
+        animation: BigAniLeave 01s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 alternate-reverse both;
+    }
+
+    #Circle::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 20px;
+        background-color: rgb(255, 0, 0);
+        transform: rotate(45deg);
+    }
+
+    #Circle::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 20px;
+        background-color: rgb(255, 0, 0);
+        transform: rotate(-45deg);
+    }
+
+    @keyframes BigAni {
+        from {
+            transform: scale(1) rotate(0deg);
+            border-color: rgb(71, 68, 255);
+        }
+
+        to {
+            transform: scale(1.4) rotate(180deg);
+            border-color: rgb(255, 0, 0);
+        }
+    }
+
+    @keyframes BigAniLeave {
+        from {
+            transform: scale(1) rotate(0deg);
+            border-color: rgb(71, 68, 255);
+        }
+
+        to {
+            transform: scale(1.4) rotate(180deg);
+            border-color: rgb(255, 0, 0);
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div id="sec">
+        <div class="Null" id="Circle"></div>
+    </div>
+</body>
+<script>
+    let Circle = document.getElementById("Circle");
+    Circle.addEventListener("mouseover", () => {
+        Circle.className = "CirUp"
+    });
+    Circle.addEventListener("mouseleave", () => {
+        Circle.className = "CirLeave"
+
+    });
+</script>
+
+</html>

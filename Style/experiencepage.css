@@ -1,0 +1,133 @@
+:root {
+    --uniFontColor: rgb(0, 0, 0);
+    --UniWhiteColor: white;
+    --navLinkFontClr: rgb(0, 0, 0);
+    --navLinkHoverBG: rgb(212, 212, 212);
+    --contentCardsBG: #ab4cff;
+    --wlcmBoxShado: rgba(90, 29, 116, 0.21);
+    --miniHeadingFSize: 1.5rem;
+    --navLinkFontSze: 1rem;
+    --wlcmttxtfontsize: 1.7rem;
+    --socialCrdWid: 4rem;
+    --queInWid: 25rem;
+    --buyStpImgWid: 12rem;
+    --ImpThngImgWid: 10rem;
+    --WIInivrexImgWid: 8rem;
+    --ofrClckImgWid: 2rem;
+    --navBrnTxtImgWid: 8rem;
+    --byStpContFntSize: 5rem;
+    --navBrnblbImgWid: 3rem;
+    --PrimaryBG: Whitesmoke;
+    --SecondaryBG: white;
+    --TertiaryBG: #c3c3c398;
+    --QuadBG: #dbdbdb;
+    --fontsizeSmlTnOtr: 0.1rem;
+    --SimiMiniHeadings: 1.1rem;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* Universal Classes */
+.miniPriHeadings {
+    font: caption;
+    font-size: var(--miniHeadingFSize);
+    color: var(--uniFontColor);
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 0.1rem;
+    margin-top: 1rem;
+}
+
+.contentPrivacy {
+    font: caption;
+    font-size: var(--navLinkFontSze);
+    text-align: justify;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-right: auto;
+    align-items: center;
+    margin-top: 0.1rem;
+}
+
+.simiMiniHeadings {
+    font: caption;
+    font-size: var(--SimiMiniHeadings);
+    color: var(--uniFontColor);
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+section {
+    padding: 3%;
+}
+
+#desMiniWebHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font: caption;
+    color: var(--uniFontColor);
+    font-size: var(--navLinkFontSze);
+
+}
+
+/* Card Section  */
+#CardsParentWebPojects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.cardsWebPro {
+    width: 12rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: var(--PrimaryBG);
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.cardsWebPro:hover {
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.144);
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+.ImgOfProWeb {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.WebProTxts {
+    color: var(--uniFontColor);
+    font: caption;
+    font-size: var(--navLinkFontSze);
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+footer {
+    margin-top: 20%;
+}

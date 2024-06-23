@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://codewithfun0.github.io/Files/CodeWithFunLogo1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+    <title>Contact us Form</title>
+    <style>
+        /* Changing Scroll Bar  */
+
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(207, 207, 207);
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: rgba(0, 128, 0, 0);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 12;
+        }
+
+        body {
+            /* background-color: #001c3a; */
+            background-color: #09294b;
+        }
+
+
+        /* Navbar section */
+
+        nav {
+            width: 100%;
+            height: auto;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 13;
+            position: fixed;
+            top: 0;
+            background-color: #045fc3;
+        }
+
+        #WebProfileInNav {
+            background-image: url(https://codewithfun0.github.io/Files/CodeWithFunLogo1.png);
+            background-position: center;
+            background-size: cover;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            margin-right: 0.5rem;
+        }
+
+        #WebNameInNav {
+            width: auto;
+            height: auto;
+            padding: 0.3rem;
+            font: caption;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: auto;
+            color: #aad3ff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            flex-direction: column;
+        }
+
+        #NameBioInNav {
+            font-size: 0.55rem;
+            padding: 0;
+            height: auto;
+        }
+
+
+        /* Search Input Section  */
+
+        #SideBarItem0 {
+            display: none;
+        }
+
+        #SearchBar {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            padding: 0.3rem 0.5rem;
+        }
+
+        #SearchInput {
+            background-color: #aad3ff;
+            width: 16rem;
+            outline: none;
+            height: 1.8rem;
+            border: none;
+            padding: 0.2rem 0.3rem;
+            font: caption;
+            font-size: 0.83rem;
+        }
+
+        #SearchInput::placeholder {
+            color: black;
+        }
+
+        #SearchDetailsWin {
+            background-color: #aad3ff;
+            position: absolute;
+            top: 100%;
+            left: 2.4%;
+            width: 95%;
+            height: 3rem;
+            z-index: 14;
+            padding: 1rem;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        #SearchState {
+            font: caption;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        #SearchSubmit {
+            background-color: #57a1ef;
+            width: 3rem;
+            height: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: 2px solid yellow;
+            border: none;
+        }
+
+        #BTNInNav {
+            width: 2.8rem;
+            height: 2.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            flex-direction: column;
+        }
+
+        .BTNInNavLines {
+            background-color: rgba(255, 255, 255, 0.664);
+            width: 80%;
+            height: 3px;
+            margin: 4px 0;
+        }
+
+
+        /* Side Bar section */
+
+
+        /* Search Input Section  */
+
+        #SearchBarInSide {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            padding: 0.3rem 0.5rem;
+            z-index: 18;
+        }
+
+        #SearchInputInSide {
+            background-color: #aad3ff;
+            width: 12rem;
+            outline: none;
+            height: 1.8rem;
+            border: none;
+            padding: 0.2rem 0.3rem;
+            font: caption;
+            font-size: 0.83rem;
+            z-index: 16;
+        }
+
+        #SearchInputInSide::placeholder {
+            color: black;
+        }
+
+        #SearchDetailsWinInSide {
+            background-color: #aad3ff;
+            position: absolute;
+            top: 100%;
+            left: 3.2%;
+            width: 93.4%;
+            height: 3rem;
+            z-index: 17;
+            padding: 1rem;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        #SearchStateInSide {
+            font: caption;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        #SearchSubmitInSide {
+            background-color: #57a1ef;
+            width: 3rem;
+            height: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: 2px solid yellow;
+            border: none;
+        }
+
+        #SideBar {
+            background-color: #00336c;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            right: -17rem;
+            top: 0%;
+            border-top: 2px solid #999;
+            z-index: 12;
+            transition: 0.5s;
+            padding-top: 4rem;
+        }
+
+        #SideItemsContainer {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .ItemInSideBar {
+            width: 100%;
+            height: auto;
+            padding: 0.6rem 0.4rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .ItemInSideBar:hover {
+            background-color: #00254e;
+        }
+
+
+        /* SideBar Items Section  */
+
+        .SideItemsIcons {
+            background-color: #ffffffad;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+        }
+
+        .SideItemsTexts {
+            color: rgb(214, 214, 214);
+            font: caption;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-left: 0.4rem;
+            padding: 0.2rem 0.6rem;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        #SideItemsIcon3,
+        #SideItemsIcon9 {
+            background-image: url(https://codewithfun0.github.io/Files/FiverrIcon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+        }
+
+
+        /* Content Section  */
+
+        #content {
+            display: flex;
+            /* align-items: center; */
+            width: 90%;
+            max-width: 90rem;
+            height: auto;
+            margin: auto;
+            margin-top: 8rem;
+            z-index: 9;
+            opacity: 1;
+            position: relative;
+            flex-direction: column;
+        }
+
+        #cir1 {
+            position: absolute;
+            width: 17rem;
+            height: 17rem;
+            top: -10%;
+            z-index: 9;
+            left: -10%;
+            border-radius: 100%;
+            background-color: rgb(11, 166, 255);
+            animation: AniCir1 20s 0s linear infinite both alternate;
+        }
+
+        @keyframes AniCir1 {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(50%);
+            }
+        }
+
+        #Cir2 {
+            width: 15rem;
+            height: 15rem;
+            background-color: yellow;
+            position: absolute;
+            z-index: 9;
+            left: 18rem;
+            transform: rotate(45deg);
+            top: 30%;
+            animation: RotaCir2 65s 0s linear infinite both;
+        }
+
+        @keyframes RotaCir2 {
+            from {
+                transform: rotate(45deg);
+            }
+
+            to {
+                transform: rotate(405deg);
+            }
+        }
+
+        #MainWin {
+            width: 26rem;
+            height: auto;
+            display: flex;
+            align-items: center;
+            /* padding: 2rem 0em; */
+            background-color: #045fc37a;
+            flex-direction: column;
+            border-radius: 10px;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            z-index: 12;
+            overflow: hidden;
+        }
+
+        #MainTxt {
+            width: 100%;
+            height: auto;
+            padding: 0.7rem;
+            font: caption;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #aad3ff;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+
+        /* Input Element sec  */
+
+        #Form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .Inputs {
+            background-color: #045fc37a;
+            width: 24rem;
+            height: 2.4rem;
+            outline: none;
+            border: none;
+            margin: 0.4rem 1rem;
+            resize: none;
+            padding: 0.1rem 0.7rem;
+            font-size: 1rem;
+            color: white;
+            border: 2px solid #045fc3;
+        }
+
+        .Inputs::placeholder {
+            color: white;
+        }
+
+        #Message {
+            height: 10rem;
+        }
+
+        #Submit {
+            width: 8rem;
+            height: 2.5rem;
+            background-color: #007bff;
+            outline: none;
+            border: none;
+            font: caption;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.4rem 0;
+        }
+
+        #messageSentp {
+            background-color: #007bff;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 14;
+            transition: 0.3s;
+        }
+
+        #MessageComplete {
+            color: white;
+            font: caption;
+            font-size: 2rem;
+        }
+
+        #BubbP {
+            height: 100%;
+            /* background-color: red; */
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            position: absolute;
+            bottom: 0%;
+        }
+
+        .Cir {
+            background-color: rgb(9, 255, 0);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 100%;
+            margin: 1rem;
+            animation: AnimateCir 6s 0s linear infinite both;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes AnimateCir {
+            0% {
+                transform: translateY(24rem);
+            }
+
+            80% {
+                transform: translateY(2rem);
+            }
+
+            100% {
+                transform: translateY(0rem);
+                opacity: 0;
+            }
+        }
+
+        #Circle1 {
+            animation-delay: 2s;
+        }
+
+        #Circle2 {
+            animation-delay: 3s;
+        }
+
+        #Circle3 {
+            animation-delay: 4s;
+        }
+
+        #Circle4 {
+            animation-delay: 1s;
+        }
+
+        #Circle5 {
+            animation-delay: 0s;
+        }
+
+        #Circle6 {
+            animation-delay: 0.4s;
+        }
+
+        #Circle7 {
+            animation-delay: 0s;
+        }
+
+        #Circle8 {
+            animation-delay: 5s;
+        }
+
+        #Circle9 {
+            animation-delay: 6s;
+        }
+
+        #Circle10 {
+            animation-delay: 10s;
+        }
+
+        #Circle11 {
+            animation-delay: 1s;
+        }
+
+        #Circle12 {
+            animation-delay: 2s;
+        }
+
+        #Circle13 {
+            animation-delay: 4s;
+        }
+
+        #Circle14 {
+            animation-delay: 0s;
+        }
+
+        #Circle15 {
+            animation-delay: 12s;
+        }
+
+        #Circle16 {
+            animation-delay: 0.7s;
+        }
+
+        #Circle17 {
+            animation-delay: 0s;
+        }
+
+        #Circle18 {
+            animation-delay: 3s;
+        }
+
+        #Circle19 {
+            animation-delay: 10s;
+        }
+
+        #Circle20 {
+            animation-delay: 03s;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font: caption;
+            font-size: 0.8rem;
+            font-family: monospace;
+            z-index: 10;
+        }
+
+
+        /* Union Classes */
+
+        .CursorPointed {
+            cursor: pointer;
+        }
+
+        .UserSeltNon {
+            user-select: none;
+        }
+
+
+        /* Media Section  */
+
+        @media screen and (max-width: 1000px) {}
+
+        @media screen and (max-width: 800px) {}
+
+        @media screen and (max-width: 750px) {}
+
+        @media screen and (max-width: 620px) {
+            #cir1 {
+                width: 12rem;
+                height: 12rem;
+                left: 2rem;
+                top: 0;
+            }
+
+            #Cir2 {
+                width: 10rem;
+                height: 10rem;
+                top: 50%;
+                left: 13rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .SideItemsTexts {
+                font-size: 0.9rem;
+            }
+
+            #SideItemsContainer::-webkit-scrollbar {
+                width: 0.2rem;
+            }
+
+            .SideItemsIcons {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            .CursorPointed {
+                cursor: default;
+            }
+
+            #SearchBar {
+                display: none;
+            }
+
+            #SideBarItem0 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #MainTxt {
+                font-size: 1.3rem;
+            }
+
+            .Inputs {
+                font-size: 0.9rem;
+            }
+
+            #Submit {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 475px) {
+            #MainWin {
+                width: 100%;
+            }
+
+            .Inputs {
+                width: 90%;
+            }
+
+            #Form {
+                width: 100%;
+            }
+
+            #Cir2 {
+                left: 20%;
+            }
+        }
+
+        @media screen and (max-width: 275px) {
+            body {
+                width: 275px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="WebNameInNav">ANYONE
+            <p id="NameBioInNav">Lorem | Lorem | Lorem</p>
+        </div>
+        <div id="SearchBar">
+            <input type="text" placeholder="Seach Here" id="SearchInput">
+            <div id="SearchDetailsWin">
+                <p id="SearchState">You can't search here. Error 001x80</p>
+            </div>
+            <button class="CursorPointed" id="SearchSubmit" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" height="85%" viewBox="0 0 24 24" width="85%" fill="#000000">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+            </button>
+        </div>
+        <div id="BTNInNav" class="CursorPointed">
+            <div class="BTNInNavLines" id="BTNInNavLines1"></div>
+            <div class="BTNInNavLines" id="BTNInNavLines2"></div>
+            <div class="BTNInNavLines" id="BTNInNavLines3"></div>
+        </div>
+    </nav>
+    <div id="SideBar">
+        <div id="SideItemsContainer">
+            <div href="#" class="CursorPointed" style="z-index: 30;" id="SideBarItem0">
+                <div id="SearchBarInSide">
+                    <input type="text" placeholder="Seach Here" id="SearchInputInSide">
+                    <div id="SearchDetailsWinInSide">
+                        <p id="SearchStateInSide">You can't search here. Error 001x80</p>
+                    </div>
+                    <button class="CursorPointed" id="SearchSubmitInSide" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="85%" viewBox="0 0 24 24" width="85%"
+                            fill="#000000">
+                            <path d="M0 0h24v24H0V0z" fill="none" />
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem1">
+                <div id="SideItemsIcon1" class="SideItemsIcons"></div>
+                <div id="SideItemsText1" class="SideItemsTexts"></div>
+            </a>
+            <a href="#" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem2">
+                <div id="SideItemsIcon2" class="SideItemsIcons"></div>
+                <div id="SideItemsText2" class="SideItemsTexts"></div>
+            </a>
+            <a href="#" target="_blank" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem3">
+                <div id="SideItemsIcon3" class="SideItemsIcons"></div>
+                <div id="SideItemsText3" class="SideItemsTexts"></div>
+            </a>
+            <a href="https://t.me/codewithfun01" target="_blank" class="ItemInSideBar CursorPointed UserSeltNon"
+                id="SideBarItem4">
+                <div id="SideItemsIcon4" class="SideItemsIcons"></div>
+                <div id="SideItemsText4" class="SideItemsTexts"></div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCRiZmYK0iaKAM-Xl67yK0Yw" target="_blank"
+                class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem5">
+                <div id="SideItemsIcon5" class="SideItemsIcons"></div>
+                <div id="SideItemsText5" class="SideItemsTexts"></div>
+            </a>
+            <a href="https://www.instagram.com/codewithfun0/" target="_blank"
+                class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem6">
+                <div id="SideItemsIcon6" class="SideItemsIcons"></div>
+                <div id="SideItemsText6" class="SideItemsTexts"></div>
+            </a>
+            <a href="#" target="_blank" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem7">
+                <div id="SideItemsIcon7" class="SideItemsIcons"></div>
+                <div id="SideItemsText7" class="SideItemsTexts"></div>
+            </a>
+            <a href="#" target="_blank" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem8">
+                <div id="SideItemsIcon8" class="SideItemsIcons"></div>
+                <div id="SideItemsText8" class="SideItemsTexts"></div>
+            </a>
+            <a href="#" class="ItemInSideBar CursorPointed UserSeltNon" id="SideBarItem9">
+                <div id="SideItemsIcon9" class="SideItemsIcons"></div>
+                <div id="SideItemsText9" class="SideItemsTexts"></div>
+            </a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="Cir2"></div>
+        <div id="cir1"></div>
+        <div id="MainWin">
+            <div id="BubbP">
+                <div class="Cir" id="Circle1"></div>
+                <div class="Cir" id="Circle2"></div>
+                <div class="Cir" id="Circle3"></div>
+                <div class="Cir" id="Circle4"></div>
+                <div class="Cir" id="Circle5"></div>
+                <div class="Cir" id="Circle6"></div>
+                <div class="Cir" id="Circle7"></div>
+                <div class="Cir" id="Circle8"></div>
+                <div class="Cir" id="Circle9"></div>
+                <div class="Cir" id="Circle10"></div>
+                <div class="Cir" id="Circle11"></div>
+                <div class="Cir" id="Circle12"></div>
+                <div class="Cir" id="Circle13"></div>
+                <div class="Cir" id="Circle14"></div>
+                <div class="Cir" id="Circle15"></div>
+                <div class="Cir" id="Circle16"></div>
+                <div class="Cir" id="Circle17"></div>
+                <div class="Cir" id="Circle18"></div>
+                <div class="Cir" id="Circle19"></div>
+                <div class="Cir" id="Circle20"></div>
+            </div>
+            <div id="messageSentp">
+                <p id="MessageComplete">
+                    Message Sent!
+                </p>
+            </div>
+            <p id="MainTxt">Contact Us</p>
+            <form action="javascript:sendmail()" id="Form" method="post">
+                <input type="text" class="Inputs form-control" name="Name" id="Name" placeholder="Name" required="">
+                <input type="email" class="Inputs form-control" name="Sender" id="Sender" placeholder="Email"
+                    required="">
+                <input type="text" class="Inputs form-control" name="Subject" id="Subject" placeholder="Subject"
+                    required="">
+                <textarea name="Message" class="Inputs form-control" id="Message" placeholder="Message"
+                    required=""></textarea>
+                <button type="submit" class="btn btn-contact" id="Submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <footer>Copyright © 20XX. All Rights Reserved.</footer>
+</body>
+<script src="Script/script.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</html>
+
+
+
+<!-- Additional JS Script -->
+<!-- let SideBar = document.getElementById("SideBar");
+let BTNInNav = document.getElementById("BTNInNav");
+let SideItemsIcon1 = document.getElementById("SideItemsIcon1");
+let SideItemsIcon2 = document.getElementById("SideItemsIcon2");
+let SideItemsIcon3 = document.getElementById("SideItemsIcon3");
+let SideItemsIcon4 = document.getElementById("SideItemsIcon4");
+let SideItemsIcon5 = document.getElementById("SideItemsIcon5");
+let SideItemsIcon6 = document.getElementById("SideItemsIcon6");
+let SideItemsIcon7 = document.getElementById("SideItemsIcon7");
+let SideItemsIcon8 = document.getElementById("SideItemsIcon8");
+let SideItemsIcon9 = document.getElementById("SideItemsIcon9");
+let SideItemsIcon10 = document.getElementById("SideItemsIcon10");
+let SideItemsIcon11 = document.getElementById("SideItemsIcon11");
+let SideItemsIcon12 = document.getElementById("SideItemsIcon12");
+let SideItemsIcon13 = document.getElementById("SideItemsIcon13");
+let SideItemsText1 = document.getElementById("SideItemsText1");
+let SideItemsText2 = document.getElementById("SideItemsText2");
+let SideItemsText3 = document.getElementById("SideItemsText3");
+let SideItemsText4 = document.getElementById("SideItemsText4");
+let SideItemsText5 = document.getElementById("SideItemsText5");
+let SideItemsText6 = document.getElementById("SideItemsText6");
+let SideItemsText7 = document.getElementById("SideItemsText7");
+let SideItemsText8 = document.getElementById("SideItemsText8");
+let SideItemsText9 = document.getElementById("SideItemsText9");
+let SideItemsText10 = document.getElementById("SideItemsText10");
+let SideItemsText11 = document.getElementById("SideItemsText11");
+let SideItemsText12 = document.getElementById("SideItemsText12");
+let SideItemsText13 = document.getElementById("SideItemsText13");
+let SearchDetailsWin = document.getElementById("SearchDetailsWin");
+let SearchInput = document.getElementById("SearchInput");
+let SearchDetailsWinInSide = document.getElementById("SearchDetailsWinInSide");
+let SearchInputInSide = document.getElementById("SearchInputInSide");
+let messageSentp = document.getElementById("messageSentp");
+let body = document.body;
+
+SearchInput.addEventListener("focusin", () => {
+    SearchDetailsWin.style.display = "flex";
+})
+SearchInput.addEventListener("focusout", () => {
+    SearchDetailsWin.style.display = "none";
+})
+SearchInputInSide.addEventListener("focusin", () => {
+    SearchDetailsWinInSide.style.display = "flex";
+})
+SearchInputInSide.addEventListener("focusout", () => {
+    SearchDetailsWinInSide.style.display = "none";
+})
+
+BTNInNav.addEventListener("click", () => {
+    if (SideBar.style.right != "0rem") {
+        SideBar.style.right = "0rem"
+        body.style.overflow = "hidden";
+    } else {
+        SideBar.style.right = "-17rem"
+        body.style.overflow = "auto";
+    }
+})
+
+let SideBarItemsSVG = []
+
+let SideBarItemsIcons = [SideItemsIcon1, SideItemsIcon2, SideItemsIcon3, SideItemsIcon4, SideItemsIcon5, SideItemsIcon6, SideItemsIcon7, SideItemsIcon8, SideItemsIcon9];
+
+// for (let i = 0; i < SideBarItemsIcons.length; i++) {
+//     SideBarItemsIcons[i].innerHTML = SideBarItemsSVG[i];
+// }
+
+let SideBarItemsTxt = ["Home", "Blogs", "Telegram", "YouTube", "Instagram", "Contact Info", "Contact Us", "Help", "Privacy Policy"];
+
+let SideBarItemsText = [SideItemsText1, SideItemsText2, SideItemsText3, SideItemsText4, SideItemsText5, SideItemsText6, SideItemsText7, SideItemsText8, SideItemsText9];
+
+for (let i = 0; i < SideBarItemsText.length; i++) {
+    SideBarItemsText[i].innerHTML += SideBarItemsTxt[i]
+}
+
+
+
+function sendmail() {
+
+    var name = $('#Name').val();
+    var email = $('#Sender').val();
+    var subject = $('#Subject').val();
+    var message = $('#Message').val();
+
+    let Sender = "aabhashsingh1995@gmail.com";
+
+    // var body = $('#body').val();
+
+    var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+
+
+    let MessageComplete = document.getElementById("MessageComplete");
+    let messageSentp = document.getElementById("messageSentp");
+    Email.send({
+        SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+        To: Sender,
+        From: "CodeWithFun@fun.com",
+        Subject: "Message from " + name,
+        Body: Body
+    }).then(
+        message => {
+            if (message == 'OK') {
+                MessageComplete.textContent = "Message Sent!"
+                messageSentp.style.display = "flex"
+                setTimeout(() => {
+                    messageSentp.style.display = "none"
+
+                }, 3000);
+            } else {
+                MessageComplete.textContent = "Message Not Sent!"
+                messageSentp.style.display = "flex"
+                setTimeout(() => {
+                    messageSentp.style.display = "none"
+
+                }, 3000);
+
+            }
+
+        }
+    );
+
+
+
+} -->

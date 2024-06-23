@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill Colors</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #111;
+  }
+
+  #sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #window {
+    width: 30rem;
+    height: 30rem;
+    background-color: #222;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  #Wavy {
+    background-color: #0095e5;
+    position: absolute;
+    bottom: -85rem;
+    width: 95rem;
+    height: 95rem;
+    border-radius: 47%;
+    content: "";
+    z-index: 12;
+    transition: 1s;
+    animation: animateWave 5s 1s linear infinite;
+  }
+
+  @keyframes animateWave {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  .Modes {
+    background-color: #333;
+    border: 1px solid rgb(255, 255, 255);
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: 2rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .Colors {
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #green {
+    background-color: green;
+  }
+
+  #red {
+    background-color: red;
+  }
+
+  .redAni {
+    animation: animateRed 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .BlueAni {
+    animation: animateRed 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .greenAni {
+    animation: animateRed 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .redAniRev {
+    animation: animateRedRev 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) reverse both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .BlueAniRev {
+    animation: animateRedRev 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) reverse both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .greenAniRev {
+    animation: animateRedRev 2s 0s cubic-bezier(0.0001, 0.0001, 1, 1) reverse both 1;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 7rem;
+    margin: -10rem 1rem;
+    font: caption;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  @keyframes animateRed {
+    0% {
+      transform: translateY(0px);
+    }
+
+    25% {
+      transform: translateY(-20px) rotateX(0deg);
+    }
+
+    100% {
+      transform: translateY(250px);
+    }
+  }
+
+  @keyframes animateRedRev {
+    0% {
+      transform: translateY(0px);
+    }
+
+    25% {
+      transform: translateY(-20px) rotateX(0deg);
+    }
+
+    100% {
+      transform: translateY(250px);
+    }
+  }
+
+  #blue {
+    background-color: blue;
+  }
+</style>
+</head>
+
+<body>
+  <div id="sec">
+    <div id="window">
+      <div id="mode1" class="Modes">Style 1</div>
+      <div id="mode2" class="Modes">Style 2</div>
+      <div id="mode3" class="Modes">Style 3</div>
+      <div id="red" class="Colors">Red</div>
+      <div id="green" class="Colors">Green</div>
+      <div id="blue" class="Colors">Blue</div>
+      <div id="Wavy"></div>
+    </div>
+  </div>
+
+  <script>
+    let mode1 = document.getElementById("mode1")
+    let mode2 = document.getElementById("mode2")
+    let mode3 = document.getElementById("mode3")
+    let Wavy = document.getElementById("Wavy")
+    let red = document.getElementById("red")
+    let green = document.getElementById("green")
+    let blue = document.getElementById("blue")
+    let myarray = [mode1, mode2, mode3]
+
+    mode1.addEventListener("mousedown", () => {
+      mode1.style.backgroundColor = "#222";
+      mode1.addEventListener("mouseup", () => {
+        mode1.style.backgroundColor = "#333";
+        Wavy.style.animationTimingFunction = "ease-in-out"
+      })
+    })
+    mode2.addEventListener("mousedown", () => {
+      mode2.style.backgroundColor = "#222";
+      mode2.addEventListener("mouseup", () => {
+        mode2.style.backgroundColor = "#333";
+        Wavy.style.animationTimingFunction = "cubic-bezier(0.7, 0.4, 0.9, 0.3)"
+      })
+    })
+    mode3.addEventListener("mousedown", () => {
+      mode3.style.backgroundColor = "#222";
+      mode3.addEventListener("mouseup", () => {
+        mode3.style.backgroundColor = "#333";
+        Wavy.style.animationTimingFunction = "linear"
+      })
+    })
+    Wavy.addEventListener("click", () => {
+      var x = Math.floor(Math.random() * 256);
+      var y = Math.floor(Math.random() * 256);
+      var z = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+      Wavy.style.backgroundColor = bgColor;
+
+    })
+    red.addEventListener("click", () => {
+      red.className = "redAni"
+      setTimeout(Redback, 2000);
+      if (green.className != "Colors") {
+        green.className = "greenAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+      if (blue.className != "Colors") {
+        blue.className = "BlueAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+    })
+    green.addEventListener("click", () => {
+      if (red.className != "Colors") {
+        red.className = "redAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+      if (blue.className != "Colors") {
+        blue.className = "BlueAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+
+    })
+    function Redback() {
+      Wavy.style.backgroundColor = "red";
+    }
+    function RedbackRev() {
+      Wavy.style.backgroundColor = "#0095e5";
+    }
+    blue.addEventListener("click", () => {
+      blue.className = "BlueAni"
+      setTimeout(Blueback, 2000);
+      if (green.className != "Colors") {
+        green.className = "greenAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+      if (red.className != "Colors") {
+        red.className = "redAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+    })
+    green.addEventListener("click", () => {
+      green.className = "greenAni"
+      setTimeout(greenback, 2000);
+      if (blue.className != "Colors") {
+        blue.className = "BlueAniRev"
+        setTimeout(BluebackRev, 500);
+      }
+      if (red.className != "Colors") {
+        red.className = "redAniRev"
+        setTimeout(RedbackRev, 500);
+      }
+    })
+    function Blueback() {
+      Wavy.style.backgroundColor = "blue";
+    }
+    function BluebackRev() {
+      Wavy.style.backgroundColor = "#0095e5";
+    }
+    function greenback() {
+      Wavy.style.backgroundColor = "green";
+    }
+    function greenbackRev() {
+      Wavy.style.backgroundColor = "#0095e5";
+    }
+  </script>
+</body>
+
+</html>

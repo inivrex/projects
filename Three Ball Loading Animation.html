@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #222;
+    }
+
+    #sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #window {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        background-color: #111;
+        border: 2px solid white;
+        border-radius: 1rem;
+    }
+
+    #line {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 100%;
+        animation: animateCir 3s 0s ease-in-out infinite both;
+    }
+
+    @keyframes animateCir {
+        5% {
+            transform: rotate(0deg);
+        }
+
+        95% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #line::before {
+        position: absolute;
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        filter: blur(0px);
+        border-radius: 100%;
+        top: 0%;
+        z-index: 12;
+    }
+
+    .Lines {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 100%;
+        opacity: 1;
+        animation: animateCir2 3s infinite both;
+    }
+
+    @keyframes animateCir2 {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        40% {
+            opacity: 1;
+
+        }
+
+        80%,
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .Lines::before {
+        position: absolute;
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-color: rgb(255, 223, 176);
+        filter: blur(0px);
+        border-radius: 100%;
+        top: 0%;
+        z-index: 11;
+    }
+
+    #Line1 {
+        animation-delay: 0.055s;
+    }
+
+    #Line2 {
+        animation-delay: 0.135s;
+    }
+
+    #Line3 {
+        animation-delay: 0.205s;
+    }
+</style>
+</head>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <div class="Lines" id="Line1"></div>
+            <div class="Lines" id="Line2"></div>
+            <div class="Lines" id="Line3"></div>
+            <div id="line"></div>
+        </div>
+    </div>
+</body>
+
+</html>

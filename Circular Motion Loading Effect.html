@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Motion Loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #111;
+        }
+
+        #sec {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #window {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 30rem;
+            height: 30rem;
+            background-color: #222;
+            /* border: 2px solid white; */
+            border-radius: 1rem;
+        }
+
+        #Circle {
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 100%;
+            animation: animateIt 1s both cubic-bezier(0.215, 0.610, 0.355, 0.6) infinite;
+        }
+
+        @keyframes animateIt {
+            form {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #Circle2 {
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            /* border: 3px solid yellow; */
+            border-radius: 100%;
+            animation: animateIt 1.5s both cubic-bezier(0.215, 0.610, 0.355, 0.6) infinite;
+        }
+
+        @keyframes animateIt {
+            form {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #CirBox1 {
+            background-color: rgb(255, 0, 0);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: "";
+            right: -10%;
+            width: 4rem;
+            height: 4rem;
+            z-index: 13;
+        }
+
+        #CirBox2 {
+            background-color: rgb(0, 26, 255);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: "";
+            left: -10%;
+            width: 4rem;
+            height: 4rem;
+            z-index: 13;
+        }
+
+        #LINE1 {
+            width: 50%;
+            height: 0.5rem;
+            position: absolute;
+            /* background: linear-gradient(45deg,red); */
+            background: red;
+            z-index: 12;
+            right: 0;
+        }
+
+        #LINE2 {
+            width: 50%;
+            height: 0.5rem;
+            position: absolute;
+            /* background: linear-gradient(240deg, blue); */
+            background: blue;
+            z-index: 12;
+            left: 0;
+
+        }
+
+        #Item {
+            background: blue;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 100%;
+            position: absolute;
+            z-index: 150;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <div id="Circle">
+                <div id="CirBox1"></div>
+                <div id="LINE1"></div>
+                <div id="Item"></div>
+            </div>
+            <div id="Circle2">
+                <div id="LINE2"></div>
+                <div id="CirBox2"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Button Switching</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #window {
+        background-color: #222;
+        border: 2px solid white;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        position: relative;
+        height: 35rem;
+        width: 25rem;
+        overflow: hidden;
+    }
+
+    #P {
+        width: 100%;
+        height: 3.5rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-template-columns: 7rem auto;
+    }
+
+    .BTNs {
+        height: 2rem;
+        width: 7rem;
+        font: caption;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #BTN1 {
+        position: relative;
+
+    }
+
+    #BTN2 {
+        position: relative;
+
+    }
+
+    #span1 {
+        position: absolute;
+        background-color: white;
+        height: 3px;
+        width: 100%;
+        bottom: 0%;
+    }
+
+    #span2 {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        bottom: 0%;
+    }
+
+    .Ani1 {
+        animation: ani1 0.3s 0s linear 1 both;
+        /* transform: scaleX(1.5); */
+        transform-origin: left;
+    }
+
+    @keyframes ani1 {
+        0% {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        50% {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        50.1% {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        100% {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+    }
+
+    .Ani2 {
+        animation: ani2 0.3s 0s linear 1 both;
+        background-color: white;
+    }
+
+    @keyframes ani2 {
+        0% {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        50.1% {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        100% {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+
+
+    .Ani3 {
+        animation: ani3 0.3s 0s linear 1 both;
+        transform: scaleX(0);
+    }
+
+    @keyframes ani3 {
+        0% {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        50% {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        50.1% {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        100% {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+    }
+
+    .Ani4 {
+        animation: ani4 0.3s 0s linear 1 both;
+        background-color: white;
+    }
+
+    @keyframes ani4 {
+        0% {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        50.1% {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        100% {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <div id="P">
+                <div class="BTNs" id="BTN1">Home
+                    <div class="AniNo" id="span1"></div>
+                </div>
+                <div class="BTNs" id="BTN2">About
+                    <div class="AniNo" id="span2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let B1 = document.getElementById("BTN1");
+        let B2 = document.getElementById("BTN2");
+        let span1 = document.getElementById("span1");
+        let span2 = document.getElementById("span2");
+
+        B2.addEventListener("click", () => {
+            span1.className = "Ani1";
+            span2.className = "Ani2";
+        })
+        B1.addEventListener("click", () => {
+            span1.className = "Ani3";
+            span2.className = "Ani4";
+        })
+    </script>
+</body>
+
+</html>
