@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Indicator</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(209, 209, 209);
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #Win {
+        width: 20rem;
+        height: 15rem;
+        background-color: rgba(0, 0, 0, 0.301);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 15px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.158);
+        padding: 4rem;
+
+    }
+
+    .Antina {
+        background-color: rgb(255, 221, 221);
+        display: flex;
+        margin: 0 0.1rem;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        border-top-left-radius: 0.5rem;
+        opacity: 0;
+        animation: DisTogg 5s 0s linear both;
+    }
+
+    @keyframes DisTogg {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    #Antina1 {
+        height: 20%;
+        animation-delay: 0s;
+    }
+
+    #Antina2 {
+        height: 40%;
+        animation-delay: 1s;
+    }
+
+    #Antina3 {
+        height: 60%;
+        animation-delay: 2s;
+    }
+
+    #Antina4 {
+        height: 80%;
+        animation-delay: 3s;
+    }
+
+    #Antina5 {
+        height: 100%;
+        animation-delay: 4s;
+    }
+</style>
+</head>
+
+<body>
+    <div id="sec">
+        <div id="Win">
+            <div id="Antina1" class="Antina"></div>
+            <div id="Antina2" class="Antina"></div>
+            <div id="Antina3" class="Antina"></div>
+            <div id="Antina4" class="Antina"></div>
+            <div id="Antina5" class="Antina"></div>
+        </div>
+    </div>
+</body>
+
+</html>
