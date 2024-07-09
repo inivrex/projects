@@ -89,7 +89,7 @@ section {
     margin-top: 1rem;
 }
 
-.cardsWebPro {
+#CardsParentWebPojects>a {
     width: 12rem;
     height: auto;
     display: flex;
@@ -100,10 +100,10 @@ section {
     flex-direction: column;
     padding: 1rem;
     border-radius: 10px;
-}
-.cardsWebPro:hover {
-    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.144);
     background-color: rgb(255, 255, 255);
+}
+#CardsParentWebPojects>a:hover {
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.144);
     transform: scale(1.1);
 }
 .ImgOfProWeb {
