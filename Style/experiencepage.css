@@ -101,11 +101,14 @@ section {
     padding: 1rem;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+    box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.106);
 }
+
 #CardsParentWebPojects>a:hover {
-    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.144);
+    transition: transform 0.3s ease;
     transform: scale(1.1);
 }
+
 .ImgOfProWeb {
     width: 100%;
     height: auto;
@@ -122,6 +125,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 

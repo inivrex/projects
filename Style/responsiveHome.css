@@ -222,6 +222,30 @@
     }
 }
 
+@media screen and (max-width: 477px) {
+    #CardsParentWebPojects>a {
+        width: 100%;
+        padding-top: 3rem;
+        box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.106);
+    }
+
+    .ImgOfProWeb {
+        width: 70%;
+        margin: auto;
+    }
+
+    .CardProCounts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .WebProTxts {
+        margin: 1rem 0rem;
+        font-weight: bold;
+    }
+}
+
 @media screen and (max-width: 400px) {
     #wlcmScreen>div:nth-child(2) {
         width: 12rem;
