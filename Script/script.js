@@ -47,7 +47,7 @@ for (let i = 0; i < WebProTxts.length; i++) {
     WebProTxts[i].textContent = textWebPro[i];
 }
 
-let ImgWebProLinks = ['https://www.inivrex.in/Files/batterychargingAnimation.png', 'https://www.inivrex.in/Files/BorderMovingAnimation.png', 'https://www.inivrex.in/Files/Circular Motion Loading Effect.png', 'https://www.inivrex.in/Files/ContactUs.png', 'https://www.inivrex.in/Files/excelStyle.png', 'https://www.inivrex.in/Files/FillingColorEffects.png', 'https://www.inivrex.in/Files/FlyingBox.png', 'https://www.inivrex.in/Files/HoverButtonEffectBorderMove.png', 'https://www.inivrex.in/Files/HoverEffectWithScale.png', 'https://www.inivrex.in/Files/LoadingEffect.png', 'https://www.inivrex.in/Files/LoadingEffect2.png', 'https://www.inivrex.in/Files/LoadingEffect3.png', 'https://www.inivrex.in/Files/ModernButtonSwitchAnimation.png', 'https://www.inivrex.in/Files/MovingFanAnimation.png', 'https://www.inivrex.in/Files/PendulumEffectLoading.png', 'https://www.inivrex.in/Files/SignalCatchingAnimation.png', 'https://www.inivrex.in/Files/SlideButton.png', 'https://www.inivrex.in/Files/ThreeBallLoadingAnimation.png', 'https://www.inivrex.in/Files/WaterDrop.png'];
+let ImgWebProLinks = ['https://inivrex.github.io/Files/batterychargingAnimation.png', 'https://inivrex.github.io/Files/BorderMovingAnimation.png', 'https://inivrex.github.io/Files/Circular Motion Loading Effect.png', 'https://inivrex.github.io/Files/ContactUs.png', 'https://inivrex.github.io/Files/excelStyle.png', 'https://inivrex.github.io/Files/FillingColorEffects.png', 'https://inivrex.github.io/Files/FlyingBox.png', 'https://inivrex.github.io/Files/HoverButtonEffectBorderMove.png', 'https://inivrex.github.io/Files/HoverEffectWithScale.png', 'https://inivrex.github.io/Files/LoadingEffect.png', 'https://inivrex.github.io/Files/LoadingEffect2.png', 'https://inivrex.github.io/Files/LoadingEffect3.png', 'https://inivrex.github.io/Files/ModernButtonSwitchAnimation.png', 'https://inivrex.github.io/Files/MovingFanAnimation.png', 'https://inivrex.github.io/Files/PendulumEffectLoading.png', 'https://inivrex.github.io/Files/SignalCatchingAnimation.png', 'https://inivrex.github.io/Files/SlideButton.png', 'https://inivrex.github.io/Files/ThreeBallLoadingAnimation.png', 'https://inivrex.github.io/Files/WaterDrop.png'];
 
 for (let i = 0; i < ImgOfProWeb.length; i++) {
     ImgOfProWeb[i].setAttribute('src', ImgWebProLinks[i]);
@@ -57,25 +57,25 @@ for (let i = 0; i < ImgOfProWeb.length; i++) {
 // Battery Charging Border Moving Box, Circular Motion Loading Effect, Contact Us Form, Excel Style, Filling Color Effects, Flying Box Effect, Hover Button Effect Border Move, 
 
 const CardswebProLinks = [
-    'https://www.inivrex.in/projects/Battery%20Charging.html',
-    'https://www.inivrex.in/projects/Border%20Moving%20Box.html',
-    'https://www.inivrex.in/projects/Circular%20Motion%20Loading%20Effect.html',
-    'https://www.inivrex.in/projects/Contact%20Us%20Form.html',
-    'https://www.inivrex.in/projects/Excel%20Style.html',
-    'https://www.inivrex.in/projects/Filling%20Color%20Effects.html',
-    'https://www.inivrex.in/projects/Flying%20Box%20Effect.html',
-    'https://www.inivrex.in/projects/Hover%20Button%20Effect%20Border%20Move.html',
-    'https://www.inivrex.in/projects/Hover%20Effect%20With%20Scale.html',
-    'https://www.inivrex.in/projects/Loading%20Effect%201.html',
-    'https://www.inivrex.in/projects/Loading%20Effect%202.html',
-    'https://www.inivrex.in/projects/Loading%20Effect%203.html',
-    'https://www.inivrex.in/projects/Modern%20Button%20Switch%20Animation.html',
-    'https://www.inivrex.in/projects/Moving%20Fan%20Animation.html',
-    'https://www.inivrex.in/projects/Pendulum%20Effect%20Loading.html',
-    'https://www.inivrex.in/projects/Signal%20Receiving%20Animation.html',
-    'https://www.inivrex.in/projects/Slide%20Button.html',
-    'https://www.inivrex.in/projects/Three%20Ball%20Loading%20Animation.html',
-    'https://www.inivrex.in/projects/Water%20Drop.html'
+    'https://inivrex.github.io/projects/Battery%20Charging.html',
+    'https://inivrex.github.io/projects/Border%20Moving%20Box.html',
+    'https://inivrex.github.io/projects/Circular%20Motion%20Loading%20Effect.html',
+    'https://inivrex.github.io/projects/Contact%20Us%20Form.html',
+    'https://inivrex.github.io/projects/Excel%20Style.html',
+    'https://inivrex.github.io/projects/Filling%20Color%20Effects.html',
+    'https://inivrex.github.io/projects/Flying%20Box%20Effect.html',
+    'https://inivrex.github.io/projects/Hover%20Button%20Effect%20Border%20Move.html',
+    'https://inivrex.github.io/projects/Hover%20Effect%20With%20Scale.html',
+    'https://inivrex.github.io/projects/Loading%20Effect%201.html',
+    'https://inivrex.github.io/projects/Loading%20Effect%202.html',
+    'https://inivrex.github.io/projects/Loading%20Effect%203.html',
+    'https://inivrex.github.io/projects/Modern%20Button%20Switch%20Animation.html',
+    'https://inivrex.github.io/projects/Moving%20Fan%20Animation.html',
+    'https://inivrex.github.io/projects/Pendulum%20Effect%20Loading.html',
+    'https://inivrex.github.io/projects/Signal%20Receiving%20Animation.html',
+    'https://inivrex.github.io/projects/Slide%20Button.html',
+    'https://inivrex.github.io/projects/Three%20Ball%20Loading%20Animation.html',
+    'https://inivrex.github.io/projects/Water%20Drop.html'
 ];
 
 for (let i = 0; i < cardsWebPro.length; i++) {
